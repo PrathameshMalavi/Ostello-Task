@@ -2,11 +2,11 @@
 
 A new Flutter project for Ostello Assigment with Ui implemetation 
 
-Here is the reference
+Here is the reference\n
 https://www.figma.com/design/dHou3Pk3b4gTzjUtU6Ls0O/Ostello-Task?node-id=0%3A1&t=T5jh9iyriyXnFcsy-1
 
-Here is the implemantation
-https://drive.google.com/drive/folders/1441aOg01kOztIZA9_kT3ZwyivkV8gz6j
+Here is the implemantation\n
+https://drive.google.com/drive/folders/1441aOg01kOztIZA9_kT3ZwyivkV8gz6j\n
 https://drive.google.com/file/d/1IZXgfJrOK53LCzQI0OKphR-EAY3QCV_D/view?usp=drivesdk
 
 
