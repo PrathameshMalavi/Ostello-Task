@@ -1,6 +1,14 @@
 # ostello_assingment
 
-A new Flutter project.
+A new Flutter project for Ostello Assigment with Ui implemetation 
+
+Here is the reference
+https://www.figma.com/design/dHou3Pk3b4gTzjUtU6Ls0O/Ostello-Task?node-id=0%3A1&t=T5jh9iyriyXnFcsy-1
+
+Here is the implemantation
+https://drive.google.com/drive/folders/1441aOg01kOztIZA9_kT3ZwyivkV8gz6j
+https://drive.google.com/file/d/1IZXgfJrOK53LCzQI0OKphR-EAY3QCV_D/view?usp=drivesdk
+
 
 ## Getting Started
 
@@ -14,3 +22,5 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
