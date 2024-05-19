@@ -32,74 +32,68 @@ class _TabContainerState extends State<TabContainer> {
       child: Scaffold(
         appBar: AppBar(
           title: Container(
-            child: Stack(
+            child: Row(
               children: [
-                Positioned(
-                    right: 70,
-                    top: 0,
-                    child:IconButton(
-                      icon: Icon(
-                        Icons.favorite_border,
-                        color: Colors.red,
-                        size: 28,
-                      ),
-                      tooltip: 'Comment Icon',
-                      onPressed: () {},
-                    ),
+                IconButton(
+                  icon: SvgPicture.asset(
+                    "assets/AppBar/group_1_x2.svg",
+                    semanticsLabel: 'Back Logo',
+                    height: 30,
+                    width: 30,
+                  ),
+                  tooltip: 'Menu Icon',
+                  onPressed: () {},
                 ),
-                Row(
-                  children: [
-                    IconButton(
-                      icon: SvgPicture.asset(
-                        "assets/AppBar/group_1_x2.svg",
-                        semanticsLabel: 'Acme Logo',
-                        height: 30,
-                        width: 30,
-                      ),
-                      tooltip: 'Menu Icon',
-                      onPressed: () {},
+                Container(
+                  margin: EdgeInsets.only(left: 5),
+                  child: Text(
+                    'Radiology',
+                    style: GoogleFonts.getFont(
+                      'Roboto Condensed',
+                      fontWeight: FontWeight.w800,
+                      fontSize: 24,
+                      color: Color(0xFF201926),
                     ),
-                    Container(
-                      margin: EdgeInsets.only(left: 5),
-                      child: Text(
-                        'Radiology',
-                        style: GoogleFonts.getFont(
-                          'Roboto Condensed',
-                          fontWeight: FontWeight.w800,
-                          fontSize: 24,
-                          color: Color(0xFF201926),
-                        ),
-                      ),
+                  ),
+                ),
+                Expanded(child: Container()),
+                Container(
+                  child:IconButton(
+                    icon: Icon(
+                      Icons.favorite_border,
+                      color: Colors.red,
+                      size: 28,
                     ),
-                    Expanded(child: Container()),
-                    IconButton(
-                      icon: SvgPicture.asset(
-                        "assets/AppBar/vector_6_x2.svg",
-                        semanticsLabel: 'Acme Logo',
-                        height: 22,
-                        width: 30,
-                      ),
-                      tooltip: 'Comment Icon',
-                      onPressed: () {},
+                    tooltip: 'Favourutes Icon',
+                    onPressed: () {},
+                  ),
+                ),
+                IconButton(
+                  icon: SvgPicture.asset(
+                    "assets/AppBar/vector_6_x2.svg",
+                    semanticsLabel: 'Forward',
+                    height: 22,
+                    width: 30,
+                  ),
+                  tooltip: 'Forward Icon',
+                  onPressed: () {},
+                ),
+                Container(
+                  height: 33,
+                  width: 33,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                      color: Colors.white),
+                  child: IconButton(
+                    icon: Container(
+                      child: Image.asset(
+                          width: 33,
+                          height: 33,
+                          "assets/logo/bot_face_1.png"),
                     ),
-                    Container(
-                      height: 33,
-                      width: 33,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: Colors.white),
-                      child: IconButton(
-                        icon: Container(
-                          child: Image.asset(
-                              width: 33,
-                              height: 33,
-                              "assets/logo/bot_face_1.png"),
-                        ),
-                        tooltip: 'Comment Icon',
-                        onPressed: () {},
-                      ),
-                    ),
-                  ],
+                    tooltip: 'Bot Icon',
+                    onPressed: () {},
+                  ),
                 ),
               ],
             ),
