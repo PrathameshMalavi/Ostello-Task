@@ -135,8 +135,8 @@ class _MarketPlaceScreenState extends State<MarketPlaceScreen> {
             ),
           ),
           Positioned(
-            bottom: 15,
-            right: 14,
+            bottom: 16,
+            right: 15,
             child: Container(
               margin: EdgeInsets.fromLTRB(0, 12.1, 0, 2.9),
               child: SizedBox(
@@ -150,8 +150,87 @@ class _MarketPlaceScreenState extends State<MarketPlaceScreen> {
               ),
             ),
           ),
+          Positioned(top: 10, left: 10, child: _verifiedSymbol(index)),
+          Positioned(bottom: 10, left: 10, child: _offerAndSavings(index)),
         ],
       ),
+    );
+  }
+
+  Widget _verifiedSymbol(int index) {
+    return Container(
+      margin: EdgeInsets.fromLTRB(0, 0, 0, 81),
+      child: Align(
+        alignment: Alignment.topLeft,
+        child: Container(
+          decoration: BoxDecoration(
+            color: Color(0xFF0070CE),
+            borderRadius: BorderRadius.circular(100),
+          ),
+          child: Container(
+            padding: EdgeInsets.fromLTRB(8, 0, 0, 0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  margin: EdgeInsets.fromLTRB(0, 1.5, 3.0, 1.5),
+                  child: Text(
+                    'Verified',
+                    style: GoogleFonts.getFont(
+                      'Roboto Condensed',
+                      fontWeight: FontWeight.w800,
+                      fontSize: 10,
+                      height: 1.7,
+                      letterSpacing: 0.1,
+                      color: Color(0xFFFFFFFF),
+                    ),
+                  ),
+                ),
+                Container(
+                  child: Container(
+                    width: 20,
+                    height: 20,
+                    child: Image.asset("assets/images/image_153.png"),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _offerAndSavings(int index) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          margin: EdgeInsets.fromLTRB(0, 0, 1.4, 2),
+          child: Text(
+            '${marketList[index].offer}% off ',
+            style: GoogleFonts.getFont(
+              'Roboto Condensed',
+              fontWeight: FontWeight.w900,
+              fontSize: 16,
+              height: 1.2,
+              color: Color(0xFFFFFFFF),
+            ),
+          ),
+        ),
+        Text(
+          marketList[index].discout,
+          style: GoogleFonts.getFont(
+            'Roboto Condensed',
+            fontWeight: FontWeight.w800,
+            fontSize: 10,
+            height: 1.2,
+            color: Color(0xCCFFFFFF),
+          ),
+        ),
+      ],
     );
   }
 
@@ -239,7 +318,13 @@ class _MarketPlaceScreenState extends State<MarketPlaceScreen> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: <Color>[Colors.grey.shade200, Colors.grey],
+            transform: GradientRotation(45),
+            colors: <Color>[
+              Colors.indigo.shade900,
+              Colors.indigo.shade300,
+              Colors.green.shade300,
+              Colors.white
+            ],
           ),
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(0),
